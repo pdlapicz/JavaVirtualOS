@@ -10,18 +10,18 @@ public class ProcessManager {
 	private Process mainProcess;
 	
 	public ProcessManager() {
-		mainProcess = new Process("main", 0, 1);
+		mainProcess = new Process("main", 0, 1); // g³ówny proces 
 	}
 
-	public void newProcess(String name, int priority) {
+	public void newProcess(String name, int priority) { // tworzy nowy proces do poprawienia
 		mainProcess.addProcess(name, priority);
 	}
 	
-	public void shutDown() {
+	public void shutDown() { // zabija wszystkie procesy do testów do poprawienia
 		mainProcess.kill();
 	}
 	
-	public void ps() {
+	public void ps() { // wyœwietla wszystkie procesy w systemie
 		System.out.println("PID\tPPID\tNAME\tSTATE\tPRIORITY");
 		mainProcess.print();
 	}
