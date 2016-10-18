@@ -1,9 +1,9 @@
-package przyk≥adModu≥u;
+package przyk≈ÇadModu≈Çu;
 
 public class Test {
 
 	public static void main(String[] args) {
-		System.out.println("test przyk≥adowego modu≥u");
+		System.out.println("test przyk≈Çadowego modu≈Çu");
 	}
 
 }

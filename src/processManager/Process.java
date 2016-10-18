@@ -13,10 +13,10 @@ public class Process {
 	private static int CPID = 0;
 	private int PID; // identyfikator procesy
 	private String name; // nazwa
-	private int PPID; // proces nadrzêdny
+	private int PPID; // proces nadrzÄ™dny
 	private int priority; // priorytet
 	private String state; // stan procesu
-	private int counter; // licznik rozkazów
+	private int counter; // licznik rozkazÃ³w
 	private byte[] program; // kod programu 
 	
 	private HashMap<Integer, Process> KPID = new HashMap<Integer, Process>(); // procesy potomne
@@ -50,7 +50,7 @@ public class Process {
 	
 	public void exec() {
 		state = "RUN";
-		//TODO : jak bêdzie gotowy praser to tutaj przeka¿e dane do wykonania.
+		//TODO : jak bÄ™dzie gotowy praser to tutaj przekazan dane do wykonania.
 		//praser.exec(this);
 	}
 	
