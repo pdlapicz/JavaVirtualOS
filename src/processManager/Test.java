@@ -1,3 +1,9 @@
+/*
+ * Autor Jakub Rybakowski
+ * Funkcje testuj¹ce ProcessManagera
+ * Stworzony 13:30 18.10.2016
+ */
+
 package processManager;
 
 public class Test {

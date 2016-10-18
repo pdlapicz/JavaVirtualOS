@@ -7,6 +7,7 @@ package processManager;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
+
 public class Process {
 
 	private static int CPID = 0;
@@ -14,9 +15,11 @@ public class Process {
 	private String name; // nazwa
 	private int PPID; // proces nadrzêdny
 	private int priority; // priorytet
-	private String state;
-
-	private HashMap<Integer, Process> KPID = new HashMap<Integer, Process>(); // proces potomne
+	private String state; // stan procesu
+	private int counter; // licznik rozkazów
+	private byte[] program; // kod programu 
+	
+	private HashMap<Integer, Process> KPID = new HashMap<Integer, Process>(); // procesy potomne
 	
 	public Process(String name, int PPID, int priority) {
 		this.name = name;
@@ -31,10 +34,6 @@ public class Process {
 		KPID.put(CPID, process);
 	}
 	
-	public String getName() {
-		return name;
-	}
-
 	public void print() {
 		System.out.println(PID+"\t"+PPID+"\t"+name+"\t"+state+"\t"+priority);
 		for (Entry<Integer, Process> entry : KPID.entrySet()) {
@@ -47,6 +46,32 @@ public class Process {
 		for (Entry<Integer, Process> entry : KPID.entrySet()) {
 			entry.getValue().kill();
 		}
+	}
+	
+	public void exec() {
+		state = "RUN";
+		//TODO : jak bêdzie gotowy praser to tutaj przeka¿e dane do wykonania.
+		//praser.exec(this);
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public int getPID() {
+		return PID;
+	}
+	
+	public int getPPID() {
+		return PPID;
+	}
+	
+	public int getPriority() {
+		return priority;
+	}
+	
+	public String getState() {
+		return state;
 	}
 }
  
