@@ -14,7 +14,7 @@ public class ProcessManager {
 	}
 
 	public void newProcess(String name, int priority) { // tworzy nowy proces do poprawienia
-		mainProcess.addProcess(name, priority);
+		mainProcess.createChild(name, priority);
 	}
 	
 	public void shutDown() { // zabija wszystkie procesy do testów do poprawienia
